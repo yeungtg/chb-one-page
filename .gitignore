@@ -16,7 +16,7 @@ approval/static/*
 *.njsproj
 *.sln
 .babelrc.1
-dist/
+dist*
 
 *renhongbak*
 *.renhongbak*
