@@ -7,7 +7,7 @@ Vue.use(Router)
 
 // 根路由
 let rootRouter = [{
-    path: '/',
+    path: '/app/home',
     component: App,
     meta: {
       title: "工人之家"
@@ -19,7 +19,7 @@ let rootRouter = [{
   // 重定向路由必须放所有路由最下面
   {
     path: '*',
-    redirect: '/'
+    redirect: '/app/home'
   }
 ]
 
