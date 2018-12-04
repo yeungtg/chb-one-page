@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>工人之家</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <link rel="icon" href="./static/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+  <script>
+    ((win, doc) => {
+      const docEl = doc.documentElement
+      const resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize'
+      const recalc = () => {
+        let clientWidth = docEl.clientWidth
+        if (!clientWidth) return
+        clientWidth = clientWidth > 414 ? 414 : clientWidth
+        docEl.style.fontSize = (clientWidth / 375 * 37.5) + 'px'
+      }
+
+      if (!doc.addEventListener) return
+      recalc()
+      win.addEventListener(resizeEvt, recalc, false)
+      doc.addEventListener('DOMContentLoaded', recalc, false)
+    })(window, document)
+  </script>
+</body>
+
+</html>
