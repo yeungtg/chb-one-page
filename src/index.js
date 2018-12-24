@@ -1,10 +1,10 @@
 'use strict';
+import rem from '@/assets/js/rem'; // eslint-disable-line
 import Vue from 'vue';
 import router from '@/config/router.config';
 import LoadingConfig from '@/config/loading.config';
 import component from '@/components';
 import { Toast } from 'vant';
-
 import '*/scss/index.scss';
 import 'vant/lib/index.css';
 window.router = router;

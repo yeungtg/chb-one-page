@@ -29,7 +29,7 @@ $imgUrl: '../src/assets/img';
     justify-content: space-between;
   }
   @include e(list) {
-    flex: 1;
+    flex: 1 1 auto;
     margin: 0 auto 25px;
     align-items: center;
     text-align: center;
